@@ -1,0 +1,24 @@
+<i class="fas fa-bars" (click)="onOpen()" id="sidebar_btn"></i>
+<div class="sidebar" #appSidebar>
+    <header>
+        <div style="display: flex;justify-content: space-between;">
+            <div class="text-white logo m-1">Dinesh <span class="soni text-black ">soni</span></div>
+            <div><i style="font-size:30px;color: #FF9900;" (click)="onClose()" class="fas fa-times"></i></div>
+        </div>
+    </header>
+    <ul class="mt-2">
+        <li><a href="#"><i class="icon fas fa-file"></i>Resume</a></li>
+        <li><a href="#"><i class="icon fas fa-laptop"></i>Projects<i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="icon fas fa-brain"></i>Skills</a></li>
+        <li><a href="#"><i class="icon fab fa-blogger"></i>Blog</a></li>
+        <li><a href="#"><i class="icon fas fa-user-alt"></i>About Me</a></li>
+    </ul>
+    <div class="d-flex mt-1 mb-2 justify-content-between">
+        <div class="social_box"><i class="icon fab fa-instagram"></i>Instagram</div>
+        <div class="social_box"><i class="icon fab fa-facebook"></i>Facebook</div>
+    </div>
+    <div class="d-flex mt-1 justify-content-between">
+        <div class="social_box"><i class="icon fab fa-telegram"></i>Telegram</div>
+         <div class="social_box"><i class="icon fab fa-snapchat-ghost"></i>Snapchat</div>
+    </div>
+</div>
