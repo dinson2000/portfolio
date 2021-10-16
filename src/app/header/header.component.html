@@ -1,4 +1,95 @@
-<i class="fas fa-bars" (click)="onOpen()" id="sidebar_btn"></i>
+<i class="fas fa-bars d-none" (click)="onOpen()" id="sidebar_btn"></i>
+<div class="d-block main_header">
+    <div class="container">
+        <div id="as" class="d-flex justify-content-between p-1 align-items-center">
+            <div class="text-white header_logo">Dinesh <span class="soni text-black ">soni</span></div>
+            <div style="width: 73%;" class="d-flex">
+            <div style="width:70%;" class="input-group ">
+                <input type="text" style="font-style: italic;color: #ccc;" placeholder="Search things" class="form-control p-2 camera_btn" aria-label="Text input with segmented dropdown button">
+                <button type="button"  class="btn px-3 text-white camera_btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i style="color: #ccc;" class="fas fa-video mx-2"></i>
+                    <span style="color: #ccc;" class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <button type="button" style="background-color: #FF9900;border-radius: 0px 4px 4px 0px;"  
+                        class="btn camera_btn px-4 text-black">
+                    <i class="fas fa-search"></i>
+                </button>
+                 <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+                <div style="width:30%;" class="d-inline-block mx-3">
+                    <a href="#" style="background-color: #363636;" class="third_tab text-white"><i class="fas fa-video me-2"></i>Upload</a>
+                    <a href="#" style="background-color: #00CDBE;" class="third_tab text-black">Find Weed</a>
+                </div>
+            </div>
+            <div class="fourth_tab">
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="header_toggler">
+    <div class="container black_header">
+      <a href="#" class="black_header_content active">
+        <p>HOME</p>
+      </a>
+      <a href="#" (mouseover)="openDropdown()" (mouseout)="closeDropdown()" class="black_header_content">
+        <p style="position:relative;">PROJECTS<i class="fas fa-caret-down mx-1"></i>
+        </p>
+      </a>
+      <a href="account" class="black_header_content">
+        <p>EDUCATION</p>
+      </a>
+      <a href="myorder" class="black_header_content">
+        <p>RESUME</p>
+      </a>
+      <a href="myorder" class="black_header_content">
+        <p>SERVICES</p>
+      </a>
+      <a href="about_us" class="black_header_content">
+        <p>TESTIMONIALS</p>
+      </a>
+      <a href="about_us" class="black_header_content">
+        <p>ABOUT</p>
+      </a>
+      <a href="contact_us" class="black_header_content">
+        <p>CONTACT</p>
+      </a>
+    </div>
+    <div #dropDown class="text-white header_dropdown">
+        <div class="row">
+            <div style="background-color: #1b1b1b;height: 400px;" class="col-3">
+                <div class="container">
+                    <h4 class="mb-3">Discover Videos</h4>
+                    <p>Recommended</p>
+                    <p>Trending</p>
+                    <p>Topmost</p>
+                    <p>Best</p>
+                    <p>Explore</p>
+                    <p>Channel</p>
+                    <p>Random</p>
+                    <p>Newest</p>
+                </div>
+            </div>
+            <div style="background-color: #202020;height: 400px;" class="col-9">
+                <div style="display: inline-block;padding: 20px;" *ngFor="let projectEl of projects">
+                    <img style="width: 160px;height: 90px;" src="assets/images/{{projectEl.imagePath}}" alt="">
+                    <p class="m-0" style="font-size:16px;color: #C6C6C6;">{{projectEl.title}}</p>
+                    <p class="m-0" style="font-size:14px;color: #6A6A6A;">
+                        <i style="color: #146FDF;" class="me-2 fas fa-check-circle"></i>{{projectEl.name}}</p>
+                    <p class="m-0" style="font-size:12px;color: #6A6A6A;">{{projectEl.views}}M</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 <div class="sidebar" #appSidebar>
     <header>
         <div style="display: flex;justify-content: space-between;">
@@ -8,7 +99,7 @@
     </header>
     <ul class="mt-2">
         <li><a href="#"><i class="icon fas fa-file"></i>Resume</a></li>
-        <li><a href="#"><i class="icon fas fa-laptop"></i>Projects<i class="fas fa-caret-down"></i></a></li>
+        <li><a href="#"><i class="icon fas fa-laptop"></i>Projects<i class="fas fa-caret-down sidebar_caret"></i></a></li>
         <li><a href="#"><i class="icon fas fa-brain"></i>Skills</a></li>
         <li><a href="#"><i class="icon fab fa-blogger"></i>Blog</a></li>
         <li><a href="#"><i class="icon fas fa-user-alt"></i>About Me</a></li>
