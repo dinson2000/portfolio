@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { projectModel } from '../shared/project.model';
 
 @Component({
@@ -15,23 +15,31 @@ export class HeaderComponent implements OnInit {
     new projectModel('Admin panel driven news portal project','Truth Teller',200,'truthTeller.png'),
     new projectModel('Shopping list, recipes list angular project','Shopping List',6700,'shoppingList.png')
   ];
-  constructor() { }
+  constructor(private renderer:Renderer2) { }
 
   ngOnInit(): void {
-  this.dropdown.nativeElement.style.display='none';
-
+  // this.dropdown.nativeElement.style.display='none';
+    this.renderer.setStyle(this.dropdown.nativeElement,'display','none');
   }
   onOpen(){
-    this.sidebar.nativeElement.style.left='0px';
+    // this.sidebar.nativeElement.style.left='0px';
+    this.renderer.setStyle(this.sidebar.nativeElement,'left','0px');
+
   }
   onClose(){
-    this.sidebar.nativeElement.style.left='-85%';
+    // this.sidebar.nativeElement.style.left='-85%';
+    this.renderer.setStyle(this.sidebar.nativeElement,'left','-85%');
+
   }
   openDropdown(){
-    this.dropdown.nativeElement.style.display='block';
+    // this.dropdown.nativeElement.style.display='block';
+    this.renderer.setStyle(this.dropdown.nativeElement,'display','block');
+
   }
   closeDropdown(){
-    this.dropdown.nativeElement.style.display='none';
+    // this.dropdown.nativeElement.style.display='none';
+    this.renderer.setStyle(this.dropdown.nativeElement,'display','none');
+
   }
   
 

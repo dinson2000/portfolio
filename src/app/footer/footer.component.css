@@ -1,0 +1,38 @@
+footer{
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    background: #151515;
+    border-top: #292929;
+}
+footer>.div_container{
+    padding: 30px 0 15px 0;
+}
+.col-3>p{
+    color: #FF9900;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px;
+}
+.col-3>h5{
+    color: #808080;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.language_dropdown{
+    color: white;
+    background: #2f2f2f;
+    padding:5px 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 2px;
+}
+.col-6>i{
+    color: #808080;
+    font-size: 23px;
+    padding: 16px;
+}
