@@ -2,7 +2,7 @@
 <div class="d-block main_header">
     <div class="container">
         <div id="as" class="d-flex justify-content-between p-1 align-items-center">
-            <div class="text-white header_logo">Dinesh <span class="soni text-black ">soni</span></div>
+            <div class="text-white header_logo">dinesh <span class="soni text-black ">Soni</span></div>
             <div style="width: 73%;" class="d-flex">
             <div style="width:70%;" class="input-group ">
                 <input type="text" style="font-style: italic;color: #ccc;" placeholder="Search things" class="form-control p-2 camera_btn" aria-label="Text input with segmented dropdown button">
@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<div class="header_toggler">
+<div class="header_toggler mb-3">
     <div class="container black_header">
       <a routerLink="" [routerLinkActiveOptions]={exact:true} routerLinkActive="active" class="black_header_content">
         <p>HOME</p>
@@ -90,9 +90,10 @@
       </a>
     </div>
     <div #dropDown class="text-white header_dropdown">
-        <div class="row">
+        <!-- <div class="container"> -->
+        <div class="row m-0 p-0">
             <div style="background-color: #1b1b1b;height: 400px;" class="col-3">
-                <div class="container">
+                <div class="">
                     <h4 class="mb-3">Discover Videos</h4>
                     <p>Recommended</p>
                     <p>Trending</p>
@@ -114,12 +115,13 @@
                 </div>
             </div>
         </div>
+        <!-- </div> -->
     </div>
   </div>
 <div class="sidebar" #appSidebar>
     <header>
         <div style="display: flex;justify-content: space-between;">
-            <div class="text-white logo m-1">Dinesh <span class="soni text-black ">soni</span></div>
+            <div class="text-white logo m-1">dinesh <span class="soni text-black ">Soni</span></div>
             <div><i style="font-size:30px;color: #FF9900;" (click)="onClose()" class="fas fa-times"></i></div>
         </div>
     </header>
